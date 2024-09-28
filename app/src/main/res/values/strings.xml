@@ -2,4 +2,6 @@
     <string name="app_name">EduVenture</string>
     <string name="home_page">Home Page</string>
     <string name="button">button</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
 </resources>
