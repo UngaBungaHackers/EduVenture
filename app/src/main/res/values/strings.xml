@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">EduVenture</string>
+    <string name="home_page">Home Page</string>
+    <string name="button">button</string>
 </resources>
