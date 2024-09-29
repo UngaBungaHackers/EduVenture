@@ -27,6 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hapticFeedbackEnabled="true"
+            android:icon="@drawable/home_24px"
             android:text="Home"
             android:visibility="visible" />
 
@@ -35,6 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hapticFeedbackEnabled="true"
+            android:icon="@drawable/account_circle_24px"
             android:text="Avatar"
             android:visibility="visible" />
 
@@ -43,6 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hapticFeedbackEnabled="true"
+            android:icon="@drawable/stadia_controller_24px"
             android:text="Games"
             android:visibility="visible" />
     </com.google.android.material.tabs.TabLayout>
