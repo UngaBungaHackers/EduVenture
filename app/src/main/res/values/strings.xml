@@ -2,4 +2,15 @@
     <string name="app_name">EduVenture</string>
     <string name="home_page">Home Page</string>
     <string name="button">button</string>
+    <string name="home_tile">Tic Tac Toe</string>
+    <string name="play_button">Play</string>
+    <string name="player_setup_tile">Enter Your Name</string>
+    <string name="Label1">Player 1</string>
+    <string name="Label2">Player 2</string>
+    <string name="submit_button">Submit</string>
+    <string name="name_hint">Enter Your Name</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="play_again_button">Play Again</string>
+    <string name="home_button">Home</string>
 </resources>

@@ -12,7 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EduVenture"
         tools:targetApi="31">
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".ui.theme.GameDisplay"
+            android:exported="false" />
+        <activity
+            android:name=".ui.theme.PlayerSetup"
+            android:exported="false" />
+        <activity
+            android:name=".ui.theme.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
