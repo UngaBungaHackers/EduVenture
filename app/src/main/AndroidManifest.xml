@@ -30,6 +30,12 @@
             android:name=".ui.theme.TicMain"
             android:exported="true" />
         <activity
+            android:name=".ui.theme.PlayerSetup"
+            android:exported="true" />
+        <activity
+            android:name=".ui.theme.GameDisplay"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true" />
     </application>
