@@ -4,4 +4,6 @@
     <string name="button">button</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
+    <string name="topic">topic</string>
+    <string name="educational_topic">Educational Topic</string>
 </resources>
