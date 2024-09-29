@@ -1,10 +1,12 @@
 package com.ungubunga.eduventure
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
-
+import com.ungubunga.eduventure.ui.theme.TicMain
 
 
 class MainActivity : AppCompatActivity() {
@@ -12,6 +14,11 @@ class MainActivity : AppCompatActivity() {
     private lateinit var tabLayout: TabLayout
     private lateinit var viewPager2: ViewPager2
     private lateinit var adapter : FragmentPageAdapter
+
+    fun playTicTac(view: View) {
+        val intent = Intent(this, TicMain :: class.java)
+        startActivity(intent)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

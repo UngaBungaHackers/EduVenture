@@ -6,6 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import com.ungubunga.eduventure.ui.theme.GameDisplay
+import com.ungubunga.eduventure.ui.theme.PlayerSetup
+import com.ungubunga.eduventure.ui.theme.TicMain
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,12 +25,8 @@ class fragment_three : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-    /*
-    fun playTicTac(view: View) {
-        val intent = Intent(this, fragment_three ::class.java)
-        startActivity(intent)
-    }
-    */
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -40,7 +40,13 @@ class fragment_three : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_three, container, false)
+        var view = inflater.inflate(R.layout.fragment_three, container, false)
+        var btn = view.findViewById<Button>(R.id.button2)
+        btn.setOnClickListener{
+            val intent = Intent(requireActivity(), TicMain::class.java)
+            startActivity(intent)
+        }
+        return view
     }
 
     companion object {

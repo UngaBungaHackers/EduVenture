@@ -73,6 +73,7 @@
         android:layout_height="140dp"
         android:layout_marginTop="64dp"
         android:background="@drawable/rounded_button"
+        android:onClick="playButtonClick"
         android:stateListAnimator="@android:anim/fade_in"
         android:text="Tic Tac Toe"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
