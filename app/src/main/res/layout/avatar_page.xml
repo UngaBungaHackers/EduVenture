@@ -1,0 +1,157 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal">
+
+        <!-- Larger and perfectly round Avatar Image -->
+
+        <ImageView
+            android:id="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="155dp"
+            android:layout_height="150dp"
+            android:background="@drawable/rounded_corner"
+            android:contentDescription="User Avatar"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_avatar" />
+
+        <!-- User's Name -->
+
+
+        <Button
+            android:id="@+id/pickImageButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Pick Image"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="#99ffcc"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="24dp" />
+
+        <!-- Section Title: Stats -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Self-Improvement Stats"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#666666"
+            android:paddingBottom="16dp"
+            android:layout_gravity="center_horizontal" />
+
+        <!-- Stats: Intelligence -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reading"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="8dp"/>
+
+        <ProgressBar
+            android:id="@+id/intelligence_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="300dp"
+            android:layout_height="24dp"
+            android:progress="55"
+            android:max="100"
+            android:progressTint="#4CAF50"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Stats: Attention -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Understanding"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="8dp"/>
+
+        <ProgressBar
+            android:id="@+id/attention_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="300dp"
+            android:layout_height="24dp"
+            android:progress="15"
+            android:max="100"
+            android:progressTint="#FF9800"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Stats: Personality -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comprehension"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="8dp"/>
+
+        <ProgressBar
+            android:id="@+id/personality_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="300dp"
+            android:layout_height="24dp"
+            android:progress="40"
+            android:max="100"
+            android:progressTint="#3F51B5"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Stats: Self-Discipline -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="8dp"
+            android:text="Total"
+            android:textColor="#333333"
+            android:textSize="18sp" />
+
+        <ProgressBar
+            android:id="@+id/self_discipline_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="300dp"
+            android:layout_height="24dp"
+            android:progress="80"
+            android:max="100"
+            android:progressTint="#F44336"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"/>
+
+    </LinearLayout>
+</ScrollView>
+</RelativeLayout>
+</layout>

@@ -1,7 +1,7 @@
 const WebSocket = require('ws');
 const sqlite3 = require('sqlite3').verbose() //verbose provides more detailed stack trace
 const db = new sqlite3.Database('./data/projectData')
-const wss = new WebSocket.Server({ port: 3000 });
+const wss = new WebSocket.Server({ port: 8080 });
 
 //authenticate user and password based off sql database
 async function authenticate(user, password) {
@@ -46,4 +46,4 @@ wss.on('connection', function connection(ws) {
   });
 });
 
-console.log('WebSocket server running on ws://localhost:3000');
+console.log('WebSocket server running on ws://localhost:8080');

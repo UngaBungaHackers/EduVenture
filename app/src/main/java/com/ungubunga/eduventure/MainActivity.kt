@@ -6,7 +6,6 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
-import com.ungubunga.eduventure.ui.theme.TicMain
 
 
 class MainActivity : AppCompatActivity() {

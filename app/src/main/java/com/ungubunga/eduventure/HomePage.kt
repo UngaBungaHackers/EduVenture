@@ -1,5 +1,6 @@
 package com.ungubunga.eduventure
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -28,6 +29,7 @@ class HomePage : Fragment() {
     private var param2: String? = null
     lateinit var query:String;
     lateinit var submit: Button;
+    lateinit var quiz: Button;
     lateinit var readings: TextView;
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,16 +44,26 @@ class HomePage : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        var view = inflater.inflate(R.layout.home_page, container, false)
+        val view = inflater.inflate(R.layout.home_page, container, false)
 
         submit = view.findViewById(R.id.submit_btn)
         readings = view.findViewById<TextView>(R.id.reading_text)
 
+        quiz = view.findViewById(R.id.quiz_btn)
+        quiz.setOnClickListener{
+            val intent = Intent(requireActivity(), QuizActivity::class.java)
+            startActivity(intent)
+        }
+
         submit.setOnClickListener{
             query = view.findViewById<EditText>(R.id.topic).text.toString()
-            getResponse(query) { response ->
+            GlobalVars.CUR_QUERY = query
+
+            getResponse("Provide educational paragraphs with facts about $query with 1 page of information.")
+            { response ->
                 requireActivity().runOnUiThread {
                     readings.text = response
+                    quiz.visibility = View.VISIBLE
                 }
             }
         }
@@ -70,13 +82,13 @@ class HomePage : Fragment() {
         lifecycleScope.launch {
             try {
                 // Use the prompt based on user input
-                val prompt = "Provide educational paragraphs with facts about $question with 1 page of information"
+                val prompt = question
                 // Call the suspend function
                 val response = generativeModel.generateContent(prompt)
 
                 // Log and process the response
                 val resultText = response.text ?: "No response received."
-                Log.v("API_RESPONSE", "response: ${resultText}")
+                Log.v("API_RESPONSE", "response: ${response}")
                 callback(resultText)
             } catch (e: Exception) {
                 Log.e("API_ERROR", "Error occurred while generating content", e)

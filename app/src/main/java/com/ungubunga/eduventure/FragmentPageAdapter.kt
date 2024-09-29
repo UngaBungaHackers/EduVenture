@@ -19,9 +19,9 @@ class FragmentPageAdapter(
         return if (position == 0)
             HomePage()
         else if (position == 1)
-            fragment_two()
+            AvatarPage()
         else if (position == 2)
-            fragment_three()
+            TicMain()
         else
             HomePage()
     }
