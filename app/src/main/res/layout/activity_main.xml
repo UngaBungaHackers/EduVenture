@@ -4,60 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:visibility="visible"
-    android:background="@drawable/home_background"
-    tools:context=".HomeActivity">
+    android:orientation="vertical"
+    android:visibility="visible">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="top"
-        android:padding="16dp"
-        android:orientation="vertical">
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:hint="Enter educational topic.."
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="25sp"
-            android:padding="18dp"
-            android:inputType="text"
-            android:id="@+id/topic"
-            />
-
-        <Button
-            android:id="@+id/submit_btn"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/rounded_corner"
-            android:backgroundTint="#ff9999"
-            android:fontFamily="casual"
-            android:padding="5dp"
-            android:text="Begin EduVenture"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:layout_marginTop="20dp">
-            <TextView
-                android:id="@+id/reading_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:fontFamily="casual"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:padding="5dp"
-                android:text=""/>
-        </ScrollView>
-    </LinearLayout>
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/bottomnavigation"
         android:layout_width="0dp"
