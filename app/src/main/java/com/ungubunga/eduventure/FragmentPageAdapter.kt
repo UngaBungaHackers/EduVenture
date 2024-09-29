@@ -17,13 +17,13 @@ class FragmentPageAdapter(
 
     override fun createFragment(position: Int): Fragment {
         return if (position == 0)
-            fragment_one()
+            HomePage()
         else if (position == 1)
             fragment_two()
         else if (position == 2)
             fragment_three()
         else
-            fragment_one()
+            HomePage()
     }
 
 }
