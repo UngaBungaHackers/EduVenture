@@ -46,7 +46,7 @@ class LoginActivity : ComponentActivity() {
 
     private fun initiateWebSocketConnection() {
         // IP address
-        SERVER_URL = "ws://192.168.137.1:8080"
+        SERVER_URL = "ws://<YOUR-IP-ADDRESS>:8080"
 
         val client = OkHttpClient()
 
